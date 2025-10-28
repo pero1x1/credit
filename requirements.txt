@@ -6,3 +6,5 @@ jupyter==1.0.0
 numpy==1.26.4
 dvc==3.53.2
 joblib
+
+pyyaml
