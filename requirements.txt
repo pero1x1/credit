@@ -1,0 +1,6 @@
+pandas==2.2.2
+scikit-learn==1.5.2
+pandera==0.18.3
+ipykernel==6.29.5
+jupyter==1.0.0
+numpy==1.26.4
