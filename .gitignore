@@ -5,3 +5,9 @@ data/raw/*
 data/processed/*
 mlruns/
 .DS_Store
+
+# --- allow DVC meta files inside data/ ---
+!*.dvc
+!data/
+!data/**/
+# -----------------------------------------
