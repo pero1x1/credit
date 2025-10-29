@@ -1,5 +1,5 @@
 model:
   type: GradientBoostingClassifier
-  n_estimators: 150
-  learning_rate: 0.1
+  n_estimators: 120
+  learning_rate: 0.12
   random_state: 42
