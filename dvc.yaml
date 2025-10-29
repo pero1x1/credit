@@ -9,14 +9,17 @@ stages:
       - data/processed/test.csv
 
   train:
-    cmd: python src/models/train.py data/processed/train.csv data/processed/test.csv models/
+    params:
+    - params.yaml:
+      - model.learning_rate
+      - model.n_estimators
+    cmd: python src/models/train.py --train data/processed/train.csv --test data/processed/test.csv --model-out models/credit_default_model.pkl --metrics-out models/metrics.json
     deps:
-      - src/models/train.py
-      - data/processed/train.csv
-      - data/processed/test.csv
-      - params.yaml
+    - src/models/train.py
+    - data/processed/train.csv
+    - data/processed/test.csv
     outs:
-      - models/credit_default_model.pkl
+    - models/
     metrics:
-      - models/metrics.json:
-          cache: false
+    - models/metrics.json:
+        cache: false
